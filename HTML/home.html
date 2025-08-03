@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paddy.lk - Modern Rice Trading Platform</title>
+    <link rel="stylesheet" href="/CSS/home.css">
+    <link rel="stylesheet" href="/CSS/storage.css">
+    <link rel="stylesheet" href="/CSS/aboutus.css">
+    <link rel="stylesheet" href="/CSS/services.css">
+    <link rel="stylesheet" href="/CSS/footer.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav id="mainNavbar" class="navbar">
+  <div class="nav-container">
+    <div class="nav-logo">
+      <div class="logo-icon">
+        <i class="fas fa-seedling"></i>
+      </div>
+      <div class="logo-text">
+        <span class="logo-main">Paddy.lk</span>
+        <span class="logo-sub">Rice Trading</span>
+      </div>
+    </div>
+
+    <ul class="nav-menu">
+      <li><a href="/HTML/home.html" class="nav-link">Home</a></li>
+      <li><a href="#services" class="nav-link">Services</a></li>
+      <li><a href="#storage" class="nav-link">Storage</a></li>
+      <li><a href="/HTML/prices.html" class="nav-link">Live Prices</a></li>
+      <li><a href="/HTML/sell.html" class="nav-link">Sell Harvest</a></li>
+      <li><a href="/HTML/marketplace.html" class="nav-link">Marketplace</a></li>
+      <li><a href="#aboutus" class="nav-link">About us</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <button class="btn-login" onclick="openModal2('loginModal2')">
+        <i class="fas fa-sign-in-alt"></i>
+        <span>Login</span>
+      </button>
+
+      <button class="btn-signup" onclick="openModal2('signupModal2')">
+        <i class="fas fa-user-plus"></i>
+        <span>Join Now</span>
+      </button>
+
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+  <div class="hero-background">
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="/images/field.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-pattern"></div>
+    <div class="hero-gradient"></div>
+  </div>
+
+  <div class="hero-content">
+
+
+    <h1 class="hero-title">
+      <span class="title-main">Modern Rice Trading</span>
+      <span class="title-sub">Connecting Farmers & Buyers</span>
+    </h1>
+
+    <p class="hero-description">
+      Experience the future of rice trading with our advanced platform.
+      Real-time pricing, secure transactions, and nationwide reach.
+    </p>
+
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-number">10,000+</div>
+        <div class="stat-label">Active Farmers</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <div class="stat-number">5,000+</div>
+        <div class="stat-label">Verified Buyers</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <div class="stat-number no-counter">Rs.2B+</div>
+        <div class="stat-label">Traded Value</div>
+      </div>
+    </div>
+
+    <div class="hero-actions">
+      <button class="btn-primary" onclick="openModal('farmerSignupModal')">
+        <i class="fas fa-seedling"></i>
+        <span>Join as Farmer</span>
+        <i class="fas fa-arrow-right"></i>
+      </button>
+
+      <button class="btn-secondary" onclick="openModal('buyerSignupModal')">
+        <i class="fas fa-shopping-cart"></i>
+        <span>Join as Buyer</span>
+        <i class="fas fa-arrow-right"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="scroll-indicator">
+    <div class="scroll-text">Scroll to explore</div>
+    <div class="scroll-arrow">
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-subtitle">Comprehensive solutions for modern rice trading</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card scroll-animate">
+                    <div class="service-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Direct Trading</h3>
+                    <p>Connect directly with verified farmers and buyers for transparent, commission-free trading</p>
+                    <div class="service-features">
+                        <span class="feature-tag">Zero Commission</span>
+                        <span class="feature-tag">Verified Users</span>
+                    </div>
+                </div>
+                
+                <div class="service-card scroll-animate">
+                    <div class="service-icon">
+                        <i class="fas fa-warehouse"></i>
+                    </div>
+                    <h3>Smart Storage</h3>
+                    <p>Climate-controlled storage facilities with IoT monitoring across all provinces</p>
+                    <div class="service-features">
+                        <span class="feature-tag">IoT Enabled</span>
+                        <span class="feature-tag">Island Wide</span>
+                    </div>
+                </div>
+                
+                <div class="service-card scroll-animate">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Secure Payments</h3>
+                    <p>Blockchain-secured escrow payments with instant settlement and fraud protection</p>
+                    <div class="service-features">
+                        <span class="feature-tag">Blockchain</span>
+                        <span class="feature-tag">Instant</span>
+                    </div>
+                </div>
+                
+                <div class="service-card scroll-animate">
+                    <div class="service-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>AI Analytics</h3>
+                    <p>Machine learning powered price predictions and market trend analysis</p>
+                    <div class="service-features">
+                        <span class="feature-tag">AI Powered</span>
+                        <span class="feature-tag">Predictive</span>
+                    </div>
+                </div>
+                
+                <div class="service-card scroll-animate">
+                    <div class="service-icon">
+                        <i class="fas fa-truck-fast"></i>
+                    </div>
+                    <h3>Express Logistics</h3>
+                    <p>Same-day delivery network with GPS tracking and temperature monitoring</p>
+                    <div class="service-features">
+                        <span class="feature-tag">Same Day</span>
+                        <span class="feature-tag">GPS Tracked</span>
+                    </div>
+                </div>
+                
+                <div class="service-card scroll-animate">
+                    <div class="service-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Multi-language customer support with dedicated account managers</p>
+                    <div class="service-features">
+                        <span class="feature-tag">Multi-Language</span>
+                        <span class="feature-tag">Dedicated</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+<!-- Storage Section -->
+<section id="storage" class="storage-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Storage Network</h2>
+                <p class="section-subtitle">Strategic locations across all 9 provinces of Sri Lanka</p>
+            </div>
+            
+            <div class="storage-content">
+                <div class="storage-map">
+                    <div class="map-header">
+                        <h3>Interactive Storage Map</h3>
+                        <div class="map-legend">
+                            <div class="legend-item">
+                                <div class="legend-dot active"></div>
+                                <span>Active (8)</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-dot maintenance"></div>
+                                <span>Maintenance (1)</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-dot planned"></div>
+                                <span>Planned (2)</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="map-container">
+                       <div class="srilanka-map">
+                        <img src="/images/slmap.png" alt="map" height="700px" />
+                        </div>
+                        
+                        <div class="storage-markers">
+                            <div class="marker active" style="top: 10%; left: 31%;" >
+                                <i class="fas fa-warehouse"></i>
+                                <div class="marker-tooltip">
+                                    <h4>Northern Province</h4>
+                                    <p>Jaffna Storage Hub</p>
+                                    <span>Capacity: 8,000 MT</span>
+                                </div>
+                            </div>                           
+                            <div class="marker active" style="top: 56%; left: 35%;" >
+                                <i class="fas fa-warehouse"></i>
+                                <div class="marker-tooltip">
+                                    <h4>North Western</h4>
+                                    <p>Kurunegala Hub</p>
+                                    <span>Capacity: 12,000 MT</span>
+                                </div>
+                            </div>                           
+                            <div class="marker active" style="top: 63%; left: 49%;" >
+                                <i class="fas fa-warehouse"></i>
+                                <div class="marker-tooltip">
+                                    <h4>Central Province</h4>
+                                    <p>Kandy Storage Complex</p>
+                                    <span>Capacity: 15,000 MT</span>
+                                </div>
+                            </div>                          
+                            <div class="marker active" style="top: 72%; left: 28%;" >
+                                <i class="fas fa-warehouse"></i>
+                                <div class="marker-tooltip">
+                                    <h4>Western Province</h4>
+                                    <p>Colombo Main Hub</p>
+                                    <span>Capacity: 25,000 MT</span>
+                                </div>
+                            </div>
+                            <div class="marker active" style="top: 86%; left: 59%;" >
+                                <i class="fas fa-warehouse"></i>
+                                <div class="marker-tooltip">
+                                    <h4>Southern Province</h4>
+                                    <p>Hambantota Main Hub</p>
+                                    <span>Capacity: 25,000 MT</span>
+                                </div>
+                            </div>
+                            <div class="marker active" style="top: 77%; left: 44%;" >
+                                <i class="fas fa-warehouse"></i>
+                                <div class="marker-tooltip">
+                                    <h4>Sabaragamu Province</h4>
+                                    <p>Rathnapura Main Hub</p>
+                                    <span>Capacity: 25,000 MT</span>
+                                </div>
+                            </div>
+                            <div class="marker active" style="top: 63%; left: 74%;" >
+                                <i class="fas fa-warehouse"></i>
+                                <div class="marker-tooltip">
+                                    <h4>Eastern Province</h4>
+                                    <p>Ampara Main Hub</p>
+                                    <span>Capacity: 25,000 MT</span>
+                                </div>
+                            </div>
+                            <div class="marker active" style="top: 40%; left: 42%;" >
+                                <i class="fas fa-warehouse"></i>
+                                <div class="marker-tooltip">
+                                    <h4>North Central Province</h4>
+                                    <p>Anuradhapura Main Hub</p>
+                                    <span>Capacity: 25,000 MT</span>
+                                </div>
+                            </div>
+                            <div class="marker maintenance" style="top: 69%; left: 58%;" >
+                                <i class="fas fa-tools"></i>
+                                <div class="marker-tooltip">
+                                    <h4>Uva Province</h4>
+                                    <p>Badulla Facility</p>
+                                    <span>Status: Maintenance</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="storage-stats">
+                    <div class="stat-card scroll-animate">
+                        <div class="stat-icon">
+                            <i class="fas fa-warehouse"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number">9</div>
+                            <div class="stat-label">Storage Centers</div>
+                            <div class="stat-sublabel">Across 9 Provinces</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card scroll-animate">
+                        <div class="stat-icon">
+                            <i class="fas fa-weight-hanging"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number">150K</div>
+                            <div class="stat-label">MT Capacity</div>
+                            <div class="stat-sublabel">Total Storage</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card scroll-animate">
+                        <div class="stat-icon">
+                            <i class="fas fa-thermometer-half"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Climate Control</div>
+                            <div class="stat-sublabel">IoT Monitored</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card scroll-animate">
+                        <div class="stat-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number">99.9%</div>
+                            <div class="stat-label">Security</div>
+                            <div class="stat-sublabel">Uptime</div>
+                        </div>
+                    </div>
+                    <div class="stat-card scroll-animate">
+                        <div class="stat-icon">
+                         <i class="fa-solid fa-seedling"></i>   
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Sustainable Practices</div>
+                            <div class="stat-sublabel">Eco-friendly operations</div>
+                        </div>
+                    </div>
+                        <div class="stat-card scroll-animate">
+                        <div class="stat-icon">
+                        <i class="fa-solid fa-chart-area"></i>   
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Real-Time Analytics</div>
+                            <div class="stat-sublabel">Live monitoring</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+<!-- Contact Section -->
+<section id="aboutus"  class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Us</h2>
+                <p class="section-subtitle">We're here to help you succeed in rice trading</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="stat-card scroll-animate">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Head Office</h3>
+                            <p>World Trade Center<br>Echelon Square, Colombo 01<br>Sri Lanka</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card scroll-animate">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Phone Support</h3>
+                            <p>+94 11 7 PADDY (72339)<br>+94 77 123 4567<br>24/7 Hotline</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card scroll-animate">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email Support</h3>
+                            <p>support@paddy.lk<br>farmers@paddy.lk<br>buyers@paddy.lk</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Send us a Message</h3>
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" placeholder="First Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="Last Name" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" placeholder="Email Address" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <select required>
+                                <option value="">Select Inquiry Type</option>
+                                <option value="farmer">Farmer Support</option>
+                                <option value="buyer">Buyer Support</option>
+                                <option value="technical">Technical Issue</option>
+                                <option value="partnership">Partnership</option>
+                                <option value="general">General Inquiry</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-submit">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Send Message</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+</section>
+
+<!-- Footer section-->
+<footer>
+  <div class="footer-top">
+
+    <div class="footer-contact">
+      <p><strong>Talk to us about transforming rice</strong></p>
+      <p><i class="fas fa-phone icon"></i> +66 2 116 1055</p>
+      <p><i class="fas fa-envelope icon"></i> info@agro.lk</p>
+
+      <p><strong>Office</strong></p>
+      <p><i class="fas fa-map-marker-alt icon"></i> Charles-de-Gaulle-Strasse 5, 53113 Bonn, Germany</p>
+      <p><i class="fas fa-map-marker-alt icon"></i> SRP Secretariat, AIA Sathorn Tower,<br>
+        Unit 1405, 11/1 South Sathorn Road,<br>
+        Yannawa, Sathorn, Bangkok 10120, Thailand</p>
+
+      <p><a href="#"><strong>Our Policies</strong></a></p>
+      <p><a href="#"><strong>Privacy Policy</strong></a></p>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 WEBAGRO. All rights reserved.</p>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <a href="#">About us</a>
+      <a href="#">Join our team</a>
+      <a href="#">Assurance Scheme</a>
+      <a href="#">Contact</a>
+      <a href="#">FAQ</a>
+    </div>
+
+    <div class="footer-social">
+      <span>Follow us</span>
+      <div>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<!-- Login Modal2 -->
+<div id="loginModal2" class="modal2">
+    <div class="modal-backdrop2"></div>
+    <div class="modal-content2">
+        <button class="modal-close2" onclick="closeModal2('loginModal2')">
+            <i class="fas fa-times"></i>
+        </button>
+
+        <div class="modal-header2">
+            <div class="modal-icon2">
+                <i class="fas fa-sign-in-alt"></i>
+            </div>
+            <h2>Welcome Back</h2>
+            <p>Sign in to your Paddy.lk account</p>
+        </div>
+
+        <form class="auth-form2">
+            <div class="form-group2">
+                <input type="email" placeholder="Email Address" required>
+            </div>
+            <div class="form-group2">
+                <input type="password" placeholder="Password" required>
+            </div>
+            <div class="form-options2">
+                <label class="checkbox2">
+                    <input type="checkbox">
+                    <span class="checkmark2"></span>
+                    <span>Remember me</span>
+                </label>
+                <a href="#" class="forgot-password2">Forgot Password?</a>
+            </div>
+            <button type="submit" class="btn-submit2">
+                <i class="fas fa-sign-in-alt"></i>
+                <span>Sign In</span>
+            </button>
+            <div class="auth-links2">
+                <p>Don't have an account? <a href="#" onclick="closeModal2('loginModal2'); openModal2('signupModal2')">Sign up here</a></p>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Sign-Up Modal -->
+<div id="signupModal2" class="modal2">
+  <div class="modal-content2 small-modal2">
+    <button class="modal-close2" onclick="closeModal2('signupModal2')">
+      <i class="fas fa-times"></i>
+    </button>
+
+            <div class="modal-header2">
+                <div class="modal-icon">
+                    <i class="fas fa-user-plus"></i>
+                </div>
+                <h2>Join Paddy.lk</h2>
+                <p>Choose your account type to get started</p>
+            </div>
+
+    <div class="signup-options2">
+      <div class="signup-option2" onclick="closeModal('signupModal'); openModal('farmerSignupModal')">
+        <div class="option-icon2"><i class="fas fa-seedling"></i></div>
+        <div class="option-content2">
+          <h3>I'm a Farmer</h3>
+          <p>Sell your rice harvest directly to buyers</p>
+        </div>
+        <div class="option-arrow2"><i class="fas fa-chevron-right"></i></div>
+      </div>
+
+      <div class="signup-option2"  onclick="closeModal('signupModal'); openModal('buyerSignupModal')">
+        <div class="option-icon2"><i class="fas fa-shopping-cart"></i></div>
+        <div class="option-content2">
+          <h3>I'm a Buyer</h3>
+          <p>Source quality rice directly from farmers</p>
+        </div>
+        <div class="option-arrow2"><i class="fas fa-chevron-right"></i></div>
+      </div>
+
+        <div class="signup-option2"  onclick="closeModal('signupModal'); openModal('buyerSignupModal')">
+        <div class="option-icon2"><i class="fas fa-shopping-cart"></i></div>
+        <div class="option-content2">
+          <h3>Admin</h3>
+          <p>Join as Admin</p>
+        </div>
+        <div class="option-arrow2"><i class="fas fa-chevron-right"></i></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Farmer Signup Modal -->
+<div id="farmerSignupModal" class="modal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content large-modal">
+            <button class="modal-close" onclick="closeModal('farmerSignupModal')">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div class="modal-header">
+                <div class="modal-icon">
+                    <i class="fas fa-seedling"></i>
+                </div>
+                <h2>Farmer Registration</h2>
+                <p>Join thousands of farmers already trading on Paddy.lk</p>
+            </div>
+            
+            <form class="auth-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" placeholder="First Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Last Name" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <input type="email" placeholder="Email Address" required>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="tel" placeholder="Mobile Number (+94)" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="NIC Number" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <select required>
+                        <option value="">Select Province</option>
+                        <option value="western">Western Province</option>
+                        <option value="central">Central Province</option>
+                        <option value="southern">Southern Province</option>
+                        <option value="northern">Northern Province</option>
+                        <option value="eastern">Eastern Province</option>
+                        <option value="north-western">North Western Province</option>
+                        <option value="north-central">North Central Province</option>
+                        <option value="uva">Uva Province</option>
+                        <option value="sabaragamuwa">Sabaragamuwa Province</option>
+                    </select>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="number" placeholder="Farm Size (Acres)" required>
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="">Farming Experience</option>
+                            <option value="1-5">1-5 years</option>
+                            <option value="6-10">6-10 years</option>
+                            <option value="11-20">11-20 years</option>
+                            <option value="20+">20+ years</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="password" placeholder="Create Password" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder="Confirm Password" required>
+                    </div>
+                </div>
+                
+                <div class="form-group checkbox-group">
+                    <label class="checkbox">
+                        <input type="checkbox" required>
+                        <span class="checkmark"></span>
+                        <span>I agree to the Terms and Conditions</span>
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" required>
+                        <span class="checkmark"></span>
+                        <span>I accept the Privacy Policy</span>
+                    </label>
+                </div>
+                
+                <button type="submit" class="btn-submit">
+                    <i class="fas fa-user-plus"></i>
+                    <span>Create Farmer Account</span>
+                </button>
+            </form>
+        </div>
+</div>
+
+<!-- Buyer Signup Modal -->
+<div id="buyerSignupModal" class="modal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content large-modal">
+            <button class="modal-close" onclick="closeModal('buyerSignupModal')">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div class="modal-header">
+                <div class="modal-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <h2>Buyer Registration</h2>
+                <p>Connect with verified farmers across Sri Lanka</p>
+            </div>
+            
+            <form class="auth-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" placeholder="Company/Business Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Contact Person Name" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <input type="email" placeholder="Business Email" required>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="tel" placeholder="Phone Number" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Business Registration No." required>
+                    </div>
+                </div>
+
+                
+                <div class="form-group">
+                    <select required>
+                        <option value="">Business Type</option>
+                        <option value="rice-mill">Rice Mill</option>
+                        <option value="wholesale-trader">Wholesale Trader</option>
+                        <option value="retail-chain">Retail Chain</option>
+                        <option value="exporter">Exporter</option>
+                        <option value="food-processor">Food Processor</option>
+                        <option value="distributor">Distributor</option>
+                    </select>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="password" placeholder="Create Password" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder="Confirm Password" required>
+                    </div>
+                </div>
+                
+                <div class="form-group checkbox-group">
+                    <label class="checkbox">
+                        <input type="checkbox" required>
+                        <span class="checkmark"></span>
+                        <span>I agree to the Terms and Conditions</span>
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" required>
+                        <span class="checkmark"></span>
+                        <span>I accept the Privacy Policy</span>
+                    </label>
+                </div>
+                
+                <button type="submit" class="btn-submit">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Create Buyer Account</span>
+                </button>
+            </form>
+        </div>
+</div>
+
+
+<script src="/JS/script.js"></script>
+
+</body>
+</html>

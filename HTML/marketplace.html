@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Paddy.lk - Rice Trading</title>
+  <link rel="stylesheet" href="/CSS/marketplace.css" />
+  <link rel="stylesheet" href="/CSS/footer.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<nav id="mainNavbar" class="navbar">
+  <div class="nav-container">
+    <div class="nav-logo">
+      <div class="logo-icon"><i class="fas fa-seedling"></i></div>
+      <div class="logo-text"><span class="logo-main">Paddy.lk</span><span class="logo-sub">Rice Trading</span></div>
+    </div>
+    <ul class="nav-menu">
+      <li><a href="/HTML/home.html" class="nav-link">Home</a></li>
+      <li><a href="/HTML/services.html" class="nav-link">Services</a></li>
+      <li><a href="/HTML/storage.html" class="nav-link">Storage</a></li>
+      <li><a href="/HTML/prices.html" class="nav-link">Live Prices</a></li>
+      <li><a href="/HTML/sell.html" class="nav-link">Sell Harvest</a></li>
+      <li><a href="/HTML/marketplace.html" class="nav-link">Marketplace</a></li>
+      <li><a href="/HTML/aboutus.html" class="nav-link">About us</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn-login" onclick="openModal2('loginModal2')"><i class="fas fa-sign-in-alt"></i><span>Login</span></button>
+      <button class="btn-signup" onclick="openModal2('signupModal2')"><i class="fas fa-user-plus"></i><span>Join Now</span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- Marketplace Section -->
+<section id="marketplace" class="marketplace-section">
+<div class="market">
+  <header class="market-header">
+    <h2 class="section-title header">Paddy Marketplace</h2>
+  </header>
+
+  <div class="search-wrapper">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input type="text" id="searchInput" placeholder="Search by name or category" />
+  </div>
+
+  <div class="marketplace-container" id="marketplaceContainer"></div>
+
+  <div id="detailModal" class="modal-hidden">
+    <div id="modalContent"></div>
+    <button onclick="closeModal3()">Close</button>
+  </div>
+  </div>
+</section>
+
+<!-- Payment Section -->
+<section id="paymentModal" class="modal4">
+  <div class="modal-content4">
+    <button class="modal-close4" onclick="closeModal4('paymentModal')">
+      <i class="fas fa-times"></i>
+    </button>
+
+    <!-- Header -->
+    <div class="modal-header2">
+      <div class="modal-icon2">
+        <i class="fas fa-credit-card"></i>
+      </div>
+      <h2>Checkout & Secure Payment</h2>
+      <p>Complete your purchase securely with multiple payment options</p>
+    </div>
+
+    <!-- Main Layout -->
+    <div class="horizontal-layout">
+      <!-- Order Summary -->
+      <div class="box2">
+        <h3>Order Summary</h3>
+
+        <div class="form-group2">
+          <label for="orderItem">Item</label>
+          <input type="text" id="orderItem" readonly>
+        </div>
+
+        <div class="form-group2">
+          <label for="orderPrice">Price</label>
+          <input type="text" id="orderPrice" readonly> <!-- e.g. Rs.50/kg -->
+          <input type="hidden" id="priceNumeric">       <!-- actual numeric value -->
+        </div>
+
+        <div class="form-group2">
+          <label for="orderQty">Quantity (kg)</label>
+          <input type="number" id="orderQty" placeholder="Enter quantity" oninput="updateTotal()">
+        </div>
+
+        <div class="form-group2">
+          <label for="orderTotal">Total (Rs.)</label>
+          <input type="text" id="orderTotal" readonly>
+        </div>
+      </div>
+
+      <!-- Payment Method Section -->
+      <div class="box2">
+        <h3>Payment Method</h3>
+
+        <!-- Payment Option Buttons -->
+        <div class="payment-options2">
+          <label><input type="radio" name="payment2" value="card" checked onchange="showPaymentForm('card')"> Credit/Debit</label>
+          <label><input type="radio" name="payment2" value="bank" onchange="showPaymentForm('bank')"> Bank Transfer</label>
+          <label><input type="radio" name="payment2" value="wallet" onchange="showPaymentForm('wallet')"> Mobile Wallet</label>
+        </div>
+
+        <!-- Payment Method Forms -->
+        <div id="paymentFormsContainer">
+          <div class="payment-method-form2 show" id="creditCardForm">
+            <h4>Card Details</h4>
+            <input type="text" placeholder="Card Number">
+            <input type="text" placeholder="Expiry MM/YY">
+            <input type="text" placeholder="CVV">
+          </div>
+
+          <div class="payment-method-form2" id="bankTransferForm">
+            <h4>Bank Transfer</h4>
+            <p>A/C: 1234567890, Bank of Lanka</p>
+            <input type="file" accept="image/*">
+          </div>
+
+          <div class="payment-method-form2" id="mobileWalletForm">
+            <h4>Scan & Pay</h4>
+            <img src="images/QR.png" alt="QR Code" width="150">
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="calculator-actions2">
+            <button class="btn-reset2" onclick="closeModal4('paymentModal')">Cancel</button>
+            <button class="btn-process2" onclick="handlePayment()">Pay Now</button>
+
+        </div>
+
+        <!-- Payment status message (placed outside the button group for layout) -->
+        <div id="paymentStatus" style="margin-top: 10px; color: green; font-weight: bold;"></div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-contact">
+      <p><strong>Talk to us about transforming rice</strong></p>
+      <p><i class="fas fa-phone icon"></i> +66 2 116 1055</p>
+      <p><i class="fas fa-envelope icon"></i> info@agro.lk</p>
+      <p><strong>Office</strong></p>
+      <p><i class="fas fa-map-marker-alt icon"></i> Charles-de-Gaulle-Strasse 5, 53113 Bonn, Germany</p>
+      <p><i class="fas fa-map-marker-alt icon"></i> SRP Secretariat, AIA Sathorn Tower, Unit 1405, Bangkok, Thailand</p>
+      <p><a href="#"><strong>Our Policies</strong></a></p>
+      <p><a href="#"><strong>Privacy Policy</strong></a></p>
+      <div class="footer-bottom"><p>&copy; 2025 WEBAGRO. All rights reserved.</p></div>
+    </div>
+    <div class="footer-links">
+      <a href="#">About us</a><a href="#">Join our team</a><a href="#">Assurance Scheme</a><a href="#">Contact</a><a href="#">FAQ</a>
+    </div>
+    <div class="footer-social">
+      <span>Follow us</span>
+      <div>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/JS/script.js"></script>
+
+</body>
+</html>

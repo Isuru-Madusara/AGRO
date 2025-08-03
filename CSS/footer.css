@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Color Palette - Green, White, Black Only */
+  --primary-green: #22c55e;
+  --primary-green-dark: #16a34a;
+  --primary-green-darker: #15803d;
+  --primary-green-light: #4ade80;
+  --primary-green-lighter: #86efac;
+  --primary-green-pale: #dcfce7;
+
+  --neutral-white: #ffffff;
+  --neutral-gray-50: #f9fafb;
+  --neutral-gray-100: #f3f4f6;
+  --neutral-gray-200: #e5e7eb;
+  --neutral-gray-300: #d1d5db;
+  --neutral-gray-400: #9ca3af;
+  --neutral-gray-500: #6b7280;
+  --neutral-gray-600: #4b5563;
+  --neutral-gray-700: #374151;
+  --neutral-gray-800: #1f2937;
+  --neutral-gray-900: #111827;
+  --neutral-black: #000000;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-green: 0 10px 15px -3px rgba(34, 197, 94, 0.1), 0 4px 6px -2px rgba(34, 197, 94, 0.05);
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+
+  /* Border Radius */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  color: var(--neutral-gray-900);
+  background-color: var(--neutral-white);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+/*footer **********************************************************************************************************************************************************/
+.footer-top {
+  background: linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0)),
+              url('/images/paddy.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 2rem;
+  color: #0a5a24;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1900px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.footer-contact,
+.footer-links,
+.footer-social {
+  flex: 5 1 250px;
+  min-width: 200px;
+}
+
+.footer-contact {
+  font-weight: 600;
+  margin-left: 130px;
+  font-size: 0.95rem;
+}
+
+.footer-contact p,
+.footer-contact a {
+  margin: 0.75rem 0;
+  font-weight: 400;
+  color: var(--neutral-black);
+  font-size: 0.9rem;
+}
+
+.footer-contact a:hover {
+  text-decoration: underline;
+}
+
+.footer-contact .icon {
+  margin-right: 0.5rem;
+  color: var(--primary-green-dark);
+}
+
+.footer-bottom {
+  margin-top: 2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 1rem;
+  font-size: 0.85rem;
+  color: var(--primary-green-dark);
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 20px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--neutral-black);
+  font-size: 0.9rem;
+  margin-left: 130px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-left: 280px;
+}
+
+.footer-social span {
+  font-weight: 700;
+  color: var(--primary-green-darker);
+}
+
+.footer-social div {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.footer-social a {
+  color: var(--primary-green-dark);
+  font-size: 1.25rem;
+  transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: var(--primary-green);
+}
+
+/* ✅ Responsive layout for smaller screens */
+@media screen and (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem;
+  }
+
+  .footer-contact,
+  .footer-links,
+  .footer-social {
+    min-width: 100%;
+  }
+
+  .footer-social div {
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paddy.lk - Modern Rice Trading Platform</title>
+    <link rel="stylesheet" href="/CSS/sell.css">
+    <link rel="stylesheet" href="/CSS/footer.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    
+
+</head>
+<body>
+
+<!-- Navbar -->
+<nav id="mainNavbar" class="navbar">
+  <div class="nav-container">
+    <div class="nav-logo">
+      <div class="logo-icon"><i class="fas fa-seedling"></i></div>
+      <div class="logo-text"><span class="logo-main">Paddy.lk</span><span class="logo-sub">Rice Trading</span></div>
+    </div>
+    <ul class="nav-menu">
+      <li><a href="/HTML/home.html" class="nav-link">Home</a></li>
+      <li><a href="/HTML/services.html" class="nav-link">Services</a></li>
+      <li><a href="/HTML/storage.html" class="nav-link">Storage</a></li>
+      <li><a href="/HTML/prices.html" class="nav-link">Live Prices</a></li>
+      <li><a href="/HTML/sell.html" class="nav-link">Sell Harvest</a></li>
+      <li><a href="/HTML/marketplace.html" class="nav-link">Marketplace</a></li>
+      <li><a href="/HTML/aboutus.html" class="nav-link">About us</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn-login" onclick="openModal2('loginModal2')"><i class="fas fa-sign-in-alt"></i><span>Login</span></button>
+      <button class="btn-signup" onclick="openModal2('signupModal2')"><i class="fas fa-user-plus"></i><span>Join Now</span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- Appointment Section -->
+<section class="appointment-section">
+  <div class="appointment-container">
+    <h2><i class="fas fa-calendar-check"></i> Make Appointment to Sell Harvest</h2>
+    <form id="appointmentForm" class="appointment-form">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Enter your full name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="contact">Contact Number</label>
+        <input type="tel" pattern="^07\d{8}$" maxlength="10" inputmode="numeric" placeholder="07XXXXXXXX" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="your@email.com" required>
+      </div>
+
+      <div class="form-group">
+        <label for="riceType">Type of Rice</label>
+        <select id="riceType" required>
+          <option value="">Select a type</option>
+          <option>Premium Basmati</option>
+          <option>Jasmine Rice</option>
+          <option>Brown Rice</option>
+          <option>Red Raw Rice</option>
+          <option>Ponni Boiled</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="quantity">Quantity (kg)</label>
+        <input type="number" id="quantity" min="100" placeholder="Enter quantity in kilograms" required>
+      </div>
+
+      <div class="form-group">
+        <label for="date">Preferred Appointment Date</label>
+        <input type="date" id="date" required>
+      </div>
+
+      <div class="form-group">
+        <label for="location">Pickup Location</label>
+        <input type="text" id="location" placeholder="Enter your farm or location" required>
+      </div>
+
+      <div class="form-group" style="flex: 1 1 100%;">
+        <button type="submit" class="submit-btn">Submit Appointment</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+
+<!-- Footer section-->
+<footer>
+  <div class="footer-top">
+
+    <div class="footer-contact">
+      <p><strong>Talk to us about transforming rice</strong></p>
+      <p><i class="fas fa-phone icon"></i> +66 2 116 1055</p>
+      <p><i class="fas fa-envelope icon"></i> info@agro.lk</p>
+
+      <p><strong>Office</strong></p>
+      <p><i class="fas fa-map-marker-alt icon"></i> Charles-de-Gaulle-Strasse 5, 53113 Bonn, Germany</p>
+      <p><i class="fas fa-map-marker-alt icon"></i> SRP Secretariat, AIA Sathorn Tower,<br>
+        Unit 1405, 11/1 South Sathorn Road,<br>
+        Yannawa, Sathorn, Bangkok 10120, Thailand</p>
+
+      <p><a href="#"><strong>Our Policies</strong></a></p>
+      <p><a href="#"><strong>Privacy Policy</strong></a></p>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 WEBAGRO. All rights reserved.</p>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <a href="#">About us</a>
+      <a href="#">Join our team</a>
+      <a href="#">Assurance Scheme</a>
+      <a href="#">Contact</a>
+      <a href="#">FAQ</a>
+    </div>
+
+    <div class="footer-social">
+      <span>Follow us</span>
+      <div>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script src="/JS/sell.js"></script>
+<script src="/JS/script.js"></script>
+
+</body>
+</html>

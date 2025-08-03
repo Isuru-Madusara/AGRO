@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Paddy.lk - Rice Trading</title>
+  <link rel="stylesheet" href="/CSS/aboutus.css" />
+  <link rel="stylesheet" href="/CSS/footer.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<nav id="mainNavbar" class="navbar">
+  <div class="nav-container">
+    <div class="nav-logo">
+      <div class="logo-icon"><i class="fas fa-seedling"></i></div>
+      <div class="logo-text"><span class="logo-main">Paddy.lk</span><span class="logo-sub">Rice Trading</span></div>
+    </div>
+    <ul class="nav-menu">
+      <li><a href="/HTML/home.html" class="nav-link">Home</a></li>
+      <li><a href="/HTML/services.html" class="nav-link">Services</a></li>
+      <li><a href="/HTML/storage.html" class="nav-link">Storage</a></li>
+      <li><a href="/HTML/prices.html" class="nav-link">Live Prices</a></li>
+      <li><a href="/HTML/sell.html" class="nav-link">Sell Harvest</a></li>
+      <li><a href="/HTML/marketplace.html" class="nav-link">Marketplace</a></li>
+      <li><a href="/HTML/aboutus.html" class="nav-link">About us</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn-login" onclick="openModal2('loginModal2')"><i class="fas fa-sign-in-alt"></i><span>Login</span></button>
+      <button class="btn-signup" onclick="openModal2('signupModal2')"><i class="fas fa-user-plus"></i><span>Join Now</span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- Contact Section -->
+<section id="aboutus"  class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Us</h2>
+                <p class="section-subtitle">We're here to help you succeed in rice trading</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Head Office</h3>
+                            <p>World Trade Center<br>Echelon Square, Colombo 01<br>Sri Lanka</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Phone Support</h3>
+                            <p>+94 11 7 PADDY (72339)<br>+94 77 123 4567<br>24/7 Hotline</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email Support</h3>
+                            <p>support@paddy.lk<br>farmers@paddy.lk<br>buyers@paddy.lk</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Send us a Message</h3>
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" placeholder="First Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="Last Name" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" placeholder="Email Address" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <select required>
+                                <option value="">Select Inquiry Type</option>
+                                <option value="farmer">Farmer Support</option>
+                                <option value="buyer">Buyer Support</option>
+                                <option value="technical">Technical Issue</option>
+                                <option value="partnership">Partnership</option>
+                                <option value="general">General Inquiry</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-submit">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Send Message</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-contact">
+      <p><strong>Talk to us about transforming rice</strong></p>
+      <p><i class="fas fa-phone icon"></i> +66 2 116 1055</p>
+      <p><i class="fas fa-envelope icon"></i> info@agro.lk</p>
+      <p><strong>Office</strong></p>
+      <p><i class="fas fa-map-marker-alt icon"></i> Charles-de-Gaulle-Strasse 5, 53113 Bonn, Germany</p>
+      <p><i class="fas fa-map-marker-alt icon"></i> SRP Secretariat, AIA Sathorn Tower, Unit 1405, Bangkok, Thailand</p>
+      <p><a href="#"><strong>Our Policies</strong></a></p>
+      <p><a href="#"><strong>Privacy Policy</strong></a></p>
+      <div class="footer-bottom"><p>&copy; 2025 WEBAGRO. All rights reserved.</p></div>
+    </div>
+    <div class="footer-links">
+      <a href="#">About us</a><a href="#">Join our team</a><a href="#">Assurance Scheme</a><a href="#">Contact</a><a href="#">FAQ</a>
+    </div>
+    <div class="footer-social">
+      <span>Follow us</span>
+      <div>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/JS/script.js"></script>
+
+</body>
+</html>
